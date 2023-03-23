@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/gilbert/Desktop/Gilby/Programming/javaprogramming/junit4.jar"
+    ]
+}

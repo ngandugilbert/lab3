@@ -37,8 +37,7 @@ public class Program {
                         //if all the seats are taken
                         System.out.println("\n\nOops! all seats are full and the plane leaves in 3 hours.\n\n");
                         break;
-                    }
-                    
+                    } 
                 }
                 if(choice2==2){
                     System.out.println("Next flight leaves in 3 hours.");

@@ -5,41 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class DiceTests {
-    // @Test
-    // public void testMostFrequecy() {
-    // final int MAX_PLAYS = 100;
-    // int highestFrequency = 0;
-    // int valueIndex = 0;
-    // int expected = 7;
-    // int[] frequency;
-
-    // // assert
-    // var player = new Dice();
-    // for (int play = 1; play <= MAX_PLAYS; play++) {
-    // player.playerRollDice();
-    // }
-
-    // frequency = player.getFrequency();
-
-    // // find the highest value
-    // for (int index = 0; index < 12; index++) {
-    // highestFrequency = Math.max(highestFrequency, frequency[index]);
-
-    // }
-
-    // int actual = 0;
-    // // get the index with the value
-    // for (int index = 0; index < 12; index++) {
-    // if (highestFrequency == frequency[index]) {
-    // actual = valueIndex++;
-    // }
-
-    // valueIndex++;
-    // }
-
-    // assertEquals(expected, actual);
-
-    // }
 
     @Test
     public void testDieOneFace() {
@@ -60,6 +25,7 @@ public class DiceTests {
         else
             actual = false;
 
+        // Assert
         assertEquals(expected, actual);
 
     }
@@ -110,9 +76,9 @@ public class DiceTests {
             currentLargestValue = Math.max(frequecy[index], currentLargestValue);
         }
 
-        //get the index with the value
-        for(int index = 0; index<12; index++){
-            if(currentLargestValue==frequecy[index]){
+        // get the index with the value
+        for (int index = 0; index < 12; index++) {
+            if (currentLargestValue == frequecy[index]) {
                 currentLargestIndex = index;
             }
         }
@@ -126,6 +92,7 @@ public class DiceTests {
     // Test the frequecy of distribution to be either 0 or 11 for min index
     @Test
     public void testMinFrequency() {
+        // Arrange
         final int MAX_PLAYS = 3000;
         var playerOne = new Dice();
         int min1 = 0;
@@ -148,23 +115,19 @@ public class DiceTests {
             currentValue = Math.min(frequecy[index], currentValue);
         }
 
-        //get the index with the value
-        for(int index = 0; index<12; index++){
-            if(currentValue==frequecy[index]){
+        // get the index with the value
+        for (int index = 0; index < 12; index++) {
+            if (currentValue == frequecy[index]) {
                 currentIndex = index;
             }
         }
 
         boolean actual = false;
-        if(currentIndex == min1 || currentIndex == min2)
+        if (currentIndex == min1 || currentIndex == min2)
             actual = true;
-        
-
-        
 
         assertEquals(expected, actual);
 
     }
-
 
 }
